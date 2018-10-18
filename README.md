@@ -175,7 +175,7 @@ To Add Server in STS
 	- And import the database with below commands trough command prompt
 	
 	```
-	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\backend_app.backup"
+	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
 	```
 	
 	-  Run this project as same steps shown in bulk-api-v2 project, but here with another Server say another version of tomcat running in 8080 port.
