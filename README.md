@@ -23,27 +23,30 @@ Download JDK for Windows
 	Verifying jdk installation
 	-
 	-  In Command Prompt type java -version
-
+```
 	C:\Users\it-su>java -version
 	java version "1.8.0_161"
 	Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
 	Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
-
+```
 Setting JAVA_HOME
 -
 
 -  Right click on This PC which is in Desktop, click Properties, the pop-window opens, here click on Advances system settings, Go to Advances, click Environment Variables.
 In System variables, double click on path, Here we can Edit
 Click on new and paste bin path of jdk and again click on new and paste bin path of jre 
+```
 C:\Program Files\Java\jdk1.8.0_161\bin
 C:\Program Files\Java\jre1.8.0_161\bin
+```
 In User variables, click on New and set JAVA_HOME press OK , again New for JRE_HOME and click OK
+```
 Variable Name	JAVA_HOME
 Variable Value   C:\Program Files\Java\jdk1.8.0_161
 
 Variable Name	JRE_HOME
 Variable Value   C:\Program Files\Java\jre1.8.0_161
-
+```
 
 Download and Install Apache Tomact 
 -
@@ -52,8 +55,9 @@ https://tomcat.apache.org/download-90.cgi
 - Download the 64-bit Windows zip (pgp, sha512) file of Apache tomcat.
 - Go To Downloads, unzip apache-tomcat-8.0.53-windows-x64.zipin Apache Software Foundation in Program Files. 
 - Open Command Prompt by typing cmd in Search option in Windows button. Type below commands each and enter.
-cd C:\Program Files\Apache Software Foundation\apache-tomcat-8.0.53\bin
-catalina run
+```
+cd C:\Program Files\Apache Software Foundation\apache-tomcat-8.0.53\bin\catalina run
+```
 -  Now Open Chrome and type http://localhost:7070/ to open Tomcat home Page, this verifies Tomcat is running successfully in our machine.
 --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -80,7 +84,7 @@ Now to Import Database
 psql -h localhost -d bulkdataclient -U postgres -f " C:\export_30-03-2018.sql"
 Below is the output from command prompt:
 
-
+```
 	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\export_30-03-2018.sql"
 	Password for user postgres: XYZ
 	
@@ -88,7 +92,7 @@ Below is the output from command prompt:
 	
 	CREATE
 	...
-
+```
 
 Spring Tool Suite Installation
 -
@@ -131,16 +135,20 @@ To Add Server in STS
 
 	-  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
 	- Registring New Client 
+	```
 		UserName 	karthik3
 		Email    	gookarthik@gmail.com
 		Full Name 	Karthik M N
 		Password 	Karthik1234
+		```
 	-  Then give OK, inside this another web page opens, click on Register Backend Client with public and private der file, check for both system and user.
 
 
 	- After registration it generate ClientID and token URL as follows
+	```
 	Client ID :     bulk data apiVxAHtrAqt1
 	Token URL :  http://localhost:9090/bulk-data-api/token
+	```
 
 	To Run Secure-Backend-App
 	--
@@ -148,15 +156,19 @@ To Add Server in STS
 	-  Import the secure-backend-app project as steps shown in bulk-api-v2 project
 	- Open Application Properties inside Secure-backend-app project. And give following details
 	Serverbase =   http://localhost:8080/bulk-data-api
-	 Mode	       =    secure
-	keypath       =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API Private                         Key.der
-	iss                 =     https://sitenv.org
-	aud              =      http://localhost:9090/bulk-data-api/token
-	sub              =     bulk data apiVxAHtrAqt1
+	```
+	Mode	       =    secure
+	keypath        =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API Private                         Key.der
+	iss            =    https://sitenv.org
+	aud            =    http://localhost:9090/bulk-data-api/token
+	sub            =    bulk data apiVxAHtrAqt1
+	```
 	- Above details is necessary to extract data from bulk-api-v2 to Secure-backend-app while it is run.
 	-  Do same steps in bulk-api-v2 to create database with name say secure-backend-app
 	- And import the database with below commands trough command prompt
+	```
 	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\backend_app.backup"
+	```
 	-  Run this project as same steps shown in bulk-api-v2 project, but here with another Server say another version of tomcat running in 8080 port.
 	- We get output in this link http://localhost:8080/secure-backend-app/ .
 
