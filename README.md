@@ -141,8 +141,15 @@ To Add Server in STS
 		Full Name 	Karthik M N
 		Password 	Karthik1234
 	```
-	-  Then give OK, inside this another web page opens, click on Register Backend Client with public and private der file, check for both system and user.
-
+	-  Then give OK, inside this another web page opens, click on Register Backend Client with public der file, check for both system and user.
+	```
+	Backend Client Registration
+		Client App Name       bulk data api
+		Organization	      Xyram
+		Client Issuer URL     http://localhost:8080/bulk-data-api/
+		Public Key            Upload Public Key
+		Scope		      Check both system and user	
+	```
 
 	- After registration it generate ClientID and token URL as follows
 	```
