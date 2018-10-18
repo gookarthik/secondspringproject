@@ -140,7 +140,7 @@ To Add Server in STS
 		Email    	gookarthik@gmail.com
 		Full Name 	Karthik M N
 		Password 	Karthik1234
-		```
+	```
 	-  Then give OK, inside this another web page opens, click on Register Backend Client with public and private der file, check for both system and user.
 
 
