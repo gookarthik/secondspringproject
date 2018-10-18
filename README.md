@@ -1,13 +1,14 @@
 Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Windows
 -
 
-Installations Software’s Required
+Prerequisites
 -
 - JDK 
 - Apache Tomcat
 - pgsql
 - pgAdmin4
 - Spring Tool Suite 3.9.6
+- Maven 3.3.X
 
 Download JDK for Windows
 -
@@ -98,6 +99,13 @@ Download STS for Linux or Windows from below link
 - Go to Downloads, then Unzip, spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32-x86_64.zip, and now STS is ready to use
 To Open STS
 - Go to Downloads , then open sts-3.9.6.RELEASE , then double click on STS.exe
+
+### Built Application 
+Run Maven build to build application war file. 
+```
+$ mvn clean install 
+```
+This will generate a war file under target/{application-name}.war. Copy this to your tomcat webapp directory for deployment.
 
 	To Add Server in STS
 	--
