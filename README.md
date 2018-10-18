@@ -2,7 +2,6 @@ Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Window
 -
 Installations Software’s Required
 -
-
 - JDK 
 - Apache Tomcat
 - pgsql
