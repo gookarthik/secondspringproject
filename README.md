@@ -5,7 +5,7 @@ Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Window
 
 - JDK 
 - Apache Tomcat
-- pgsql
+- postgreSQL
 - pgAdmin4
 - Spring Tool Suite 3.9.6
 - Maven 3.3.X
@@ -85,7 +85,7 @@ psql -h localhost -d bulkdataclient -U postgres -f " C:\export_30-03-2018.sql"
 Below is the output from command prompt:
 
 ```
-	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\export_30-03-2018.sql"
+	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\bulkdata.sql"
 	Password for user postgres: XYZ
 	
 	SET
@@ -136,10 +136,10 @@ To Add Server in STS
 	-  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
 	- Registring New Client 
 	```
-		UserName 	karthik3
-		Email    	gookarthik@gmail.com
-		Full Name 	Karthik M N
-		Password 	Karthik1234
+		UserName 	abc123
+		Email    	abc123@gmail.com
+		Full Name 	abcdefg
+		Password 	abcxyz
 	```
 	-  Then give OK, inside this another web page opens, click on Register Backend Client with public der file, check for both system and user.
 	```
@@ -165,7 +165,7 @@ To Add Server in STS
 	```
 	Serverbase =   http://localhost:8080/bulk-data-api
 	Mode	        =    secure
-	keypath        =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API PrivateKey.der
+	keypath        =    C:/Users/it-su/Desktop/Bulk API PrivateKey.der
 	iss            =    https://sitenv.org
 	aud            =    http://localhost:9090/bulk-data-api/token
 	sub            =    bulk data apiVxAHtrAqt1
