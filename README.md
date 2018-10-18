@@ -108,10 +108,10 @@ $ mvn clean install
 ```
 This will generate a war file under target/{application-name}.war. Copy this to your tomcat webapp directory for deployment.
 
-	To Add Server in STS
-	--
+To Add Server in STS
+--
 
-	- In Quick Access Type Server and enter
+- In Quick Access Type Server and enter
 	- Right Click on blank white space, Then New , and Server
 	- If we don't find Tomcat Server then follow below steps
 	  - Go to Help in menu bar click on Eclipse Market Place
