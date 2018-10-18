@@ -1,13 +1,13 @@
 Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Windows
 -
 
-	Installations Software’s Required
-	-
-	- JDK 
-	- Apache Tomcat
-	- pgsql
-	- pgAdmin4
-	- Spring Tool Suite 3.9.6
+Installations Software’s Required
+-
+- JDK 
+- Apache Tomcat
+- pgsql
+- pgAdmin4
+- Spring Tool Suite 3.9.6
 
 Download JDK for Windows
 -
