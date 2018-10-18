@@ -29,7 +29,7 @@ Download JDK for Windows
 	Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
 	Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 ```
-Setting JAVA_HOME
+Setting JAVA_HOME and JRE_HOME
 -
 
 -  Right click on This PC which is in Desktop, click Properties, the pop-window opens, here click on Advances system settings, Go to Advances, click Environment Variables.
