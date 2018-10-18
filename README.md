@@ -1,29 +1,5 @@
 Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Windows
 
-
-
-
-
-
-Contents
-
-
-Download JDK for WIndows  ………………………………………………………………….Pg.No 2 - 3
-Setting JAVA_HOME……………………………………………………………………………….Pg.No 3 - 3
-Download and Install Apache Tomcat……………………………………………………..Pg.No 3 - 4
-Download And Install PostgresSQL and pgAdmin4 for Windows ……………Pg.No 4 - 4
-To Import Database into pgAdmin4…..……………………………………………………Pg.No 4 - 5
-Download and Run Spring Tool Suite……………………………………………………….Pg.No 5 – 5
-To Add Server in STS………………………………………………………………………………..Pg.No 5 - 5
-To Run Bulk-api-v2 Project……………………………………………………………………….Pg.No 6 - 7
-To Run Secure-backend-app…………………………………………………………………….Pg.No 7 - 7
-
-
-
-
-
-
-
 Installations Software’s Required
 - JDK 
 - Apache Tomcat
