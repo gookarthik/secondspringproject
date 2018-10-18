@@ -111,7 +111,7 @@ Client Registration
 -  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
 - Registring New Client 
 	UserName 	karthik3
-	Email    		gookarthik@gmail.com
+	Email    	gookarthik@gmail.com
 	Full Name 	Karthik M N
 	Password 	Karthik1234
 -  Then give OK, inside this another web page opens, click on Register Backend Client with public and private der file, check for both system and user.
