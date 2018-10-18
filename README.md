@@ -86,7 +86,6 @@ Below is the output from command prompt:
 	CREATE
 	...
 
---
 
 Spring Tool Suite Installation
 -
