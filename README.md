@@ -17,7 +17,7 @@ Download JDK for Windows
 -  Go to downloads and double click on jdk-8u161-windows-x64.exe, Pop-up window will open which ask for Do you want to allow this app to make changes to your PC?, Click Yes, just give next next, it will install and finally give close after installation.
 - Now go to C Drive, go to Program Files then java, here we can find both jdk and jre installed files.
 
-To Verify jdk installation
+Verifying jdk installation
 -
 -  In Command Prompt type java -version
 
