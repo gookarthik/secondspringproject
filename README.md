@@ -100,7 +100,8 @@ Download STS for Linux or Windows from below link
 To Open STS
 - Go to Downloads , then open sts-3.9.6.RELEASE , then double click on STS.exe
 
-### Built Application 
+Built Application 
+-
 Run Maven build to build application war file. 
 ```
 $ mvn clean install 
