@@ -23,10 +23,10 @@ Download JDK for Windows
 	-
 	-  In Command Prompt type java -version
 
-	C:\Users\it-su>java -version
-	java version "1.8.0_161"
-	Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
-	Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
+	-C:\Users\it-su>java -version
+	-java version "1.8.0_161"
+	-Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+	-Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 
 Setting JAVA_HOME
 -
