@@ -162,8 +162,8 @@ To Add Server in STS
 	
 	-  Import the secure-backend-app project as steps shown in bulk-api-v2 project
 	- Open Application Properties inside Secure-backend-app project. And give following details
-	Serverbase =   http://localhost:8080/bulk-data-api
 	```
+	Serverbase =   http://localhost:8080/bulk-data-api
 	Mode	        =    secure
 	keypath        =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API PrivateKey.der
 	iss            =    https://sitenv.org
