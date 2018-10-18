@@ -1,105 +1,163 @@
-Welcome to the AWS CodeStar sample web application
-==================================================
-
-This sample code helps get you started with a simple Java web application
-deployed by AWS Elastic Beanstalk and AWS CloudFormation.
-
-What's Here
------------
-
-This sample includes:
-
-* README.md - this file
-* .ebextensions/ - this directory contains the Java configuration file that
-  allows AWS Elastic Beanstalk to deploy your Java application
-* buildspec.yml - this file is used by AWS CodeBuild to build the web
-  application
-* pom.xml - this file is the Maven Project Object Model for the web application
-* src/main - this directory contains your Java service source files
-* src/test - this directory contains your Java service unit test files
-* template.yml - this file contains the description of AWS resources used by AWS
-  CloudFormation to deploy your infrastructure
+Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Windows
 
 
-Getting Started
----------------
 
-These directions assume you want to develop on your local computer, and not
-from the Amazon EC2 instance itself. If you're on the Amazon EC2 instance, the
-virtual environment is already set up for you, and you can start working on the
-code.
 
-To work on the sample code, you'll need to clone your project's repository to your
-local computer. If you haven't, do that first. You can find instructions in the
-AWS CodeStar user guide.
 
-1. Install maven.  See https://maven.apache.org/install.html for details.
 
-2. Install tomcat.  See https://tomcat.apache.org/tomcat-8.0-doc/setup.html for
-   details.
+Contents
 
-3. Build the application.
 
-        $ mvn -f pom.xml compile
-        $ mvn -f pom.xml package
+Download JDK for WIndows  ………………………………………………………………….Pg.No 2 - 3
+Setting JAVA_HOME……………………………………………………………………………….Pg.No 3 - 3
+Download and Install Apache Tomcat……………………………………………………..Pg.No 3 - 4
+Download And Install PostgresSQL and pgAdmin4 for Windows ……………Pg.No 4 - 4
+To Import Database into pgAdmin4…..……………………………………………………Pg.No 4 - 5
+Download and Run Spring Tool Suite……………………………………………………….Pg.No 5 – 5
+To Add Server in STS………………………………………………………………………………..Pg.No 5 - 5
+To Run Bulk-api-v2 Project……………………………………………………………………….Pg.No 6 - 7
+To Run Secure-backend-app…………………………………………………………………….Pg.No 7 - 7
 
-4. Copy the built application to the Tomcat webapp directory.  The actual
-   location of that directory will vary depending on your platform and
-   installation.
 
-        $ cp target/ROOT.war <tomcat webapp directory>
 
-4. Restart your tomcat server
 
-5. Open http://127.0.0.1:8080/ in a web browser to view your application.
 
-What Do I Do Next?
-------------------
 
-Once you have a virtual environment running, you can start making changes to
-the sample Java web application. We suggest making a small change to
-/src/main/webapp/WEB-INF/views/index.jsp first, so you can see how changes
-pushed to your project's repository are automatically picked up and deployed
-to the Amazon EC2 instance by AWS Elastic Beanstalk. (You can watch the progress
-on your project dashboard.) Once you've seen how that works, start developing
-your own code, and have fun!
 
-To run your tests locally, go to the root directory of the sample code and run the
-`mvn clean compile test` command, which AWS CodeBuild also runs through your `buildspec.yml` file.
+Installations Software’s Required
+- JDK 
+- Apache Tomcat
+- pgsql
+- pgAdmin4
+- Spring Tool Suite 3.9.6
+Download JDK for WIndows
 
-To test your new code during the release process, modify the existing tests or add tests
-to the tests directory. AWS CodeBuild will run the tests during the build stage of your
-project pipeline. You can find the test results in the AWS CodeBuild console.
+-  To download JDK in windows, Open this link https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html in Chrome and Enter
+- Here Accept the license and click on Windows x64 jdk link, it starts downloading.
 
-Learn more about Maven's [Standard Directory Layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html).
+ 
+-  Go to downloads and double click on jdk-8u161-windows-x64.exe, Pop-up window will open which ask for Do you want to allow this app to make changes to your PC?, Click Yes, just give next next, it will install and finally give close after installation.
+- Now go to C Drive, go to Program Files then java, here we can find both jdk and jre installed files.
 
-Learn more about AWS CodeBuild and how it builds and tests your application here:
-https://docs.aws.amazon.com/codebuild/latest/userguide/concepts.html
+To Verify jdk installation
+-  In Command Prompt type java -version
 
-Learn more about AWS CodeStar by reading the user guide.  Ask questions or make
-suggestions on our forum.
+C:\Users\it-su>java -version
+java version "1.8.0_161"
+Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 
-User Guide: http://docs.aws.amazon.com/codestar/latest/userguide/welcome.html
+Setting JAVA_HOME
 
-Forum: https://forums.aws.amazon.com/forum.jspa?forumID=248
+-  Right click on This PC which is in Desktop, click Properties, the pop-window opens, here click on Advances system settings, Go to Advances, click Environment Variables.
+In System variables, double click on path, Here we can Edit
+Click on new and paste bin path of jdk and again click on new and paste bin path of jre 
+C:\Program Files\Java\jdk1.8.0_161\bin
+C:\Program Files\Java\jre1.8.0_161\bin
+In User variables, click on New and set JAVA_HOME press OK , again New for JRE_HOME and click OK
+Variable Name	JAVA_HOME
+Variable Value   C:\Program Files\Java\jdk1.8.0_161
 
-How Do I Add Template Resources to My Project?
-------------------
+Variable Name	JRE_HOME
+Variable Value   C:\Program Files\Java\jre1.8.0_161
+--------------------------------------------------------------------------------------------------------------------------------------
 
-To add AWS resources to your project, you'll need to edit the `template.yml`
-file in your project's repository. You may also need to modify permissions for
-your project's worker roles. After you push the template change, AWS CodeStar
-and AWS CloudFormation provision the resources for you.
+Download and Install Apache Tomact 
+Open the Web browser say Chrome to download Apache Tomcat 9.0.8 with link given below	
+https://tomcat.apache.org/download-90.cgi
+- Download the 64-bit Windows zip (pgp, sha512) file of Apache tomcat.
+- Go To Downloads, unzip apache-tomcat-8.0.53-windows-x64.zipin Apache Software Foundation in Program Files. 
+- Open Command Prompt by typing cmd in Search option in Windows button. Type below commands each and enter.
+cd C:\Program Files\Apache Software Foundation\apache-tomcat-8.0.53\bin
+catalina run
+-  Now Open Chrome and type http://localhost:7070/ to open Tomcat home Page, this verifies Tomcat is running successfully in our machine.
+--------------------------------------------------------------------------------------------------------------------------------------
 
-See the AWS CodeStar user guide for instructions to modify your template:
-https://docs.aws.amazon.com/codestar/latest/userguide/how-to-change-project#customize-project-template.html
+Download And Install PostgresSQL and pgAdmin4 for Windows
 
-What Should I Do Before Running My Project in Production?
-------------------
+-  To Download go to the link https://www.enterprisedb.com/downloads/postgres-postgresql-downloads give Postgre version and Operating System and click on Downloads. 
+- Go to Downloads double click on PostgreSQL exe file, it asks Dou you want to allow this app to make changes to your pc? Give Yes, keep on clicking on Next, set  password as postgres again keep giving Next
+- A new pop-up window will open, here select postgresql and click Next, so now installation process is complete
+How to Open pgAdmin 4  
+-  Go to C- Drive, In Programming File, Open PostgreSQL, click on 10, then click on pgAdmin 4, click on bin, here double click on pgAdmin.exe
+--------------------------------------------------------------------------------------------------------------------------------------
 
-AWS recommends you review the security best practices recommended by the framework
-author of your selected sample application before running it in production. You
-should also regularly review and apply any available patches or associated security
-advisories for dependencies used within your application.
+To Import Database into pgAdmin4
 
-Best Practices: https://docs.aws.amazon.com/codestar/latest/userguide/best-practices.html?icmpid=docs_acs_rm_sec
+-  Open pgAdmin4
+To Create Database
+- Click on Server then click on PostgreSQL 10 then right click on Database, here click Create then click on Database  
+- A pop-up window will open, give Database name as bulkdataclient and Save.
+Now to Import Database
+-  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
+psql -h localhost -d bulkdataclient -U postgres -f " C:\export_30-03-2018.sql"
+Below is the output from command prompt
+C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\export_30-03-2018.sql"
+
+Password for user postgres:
+SET
+SET
+SET
+SET
+SET
+SET
+SET
+CREATE EXTENSION
+COMMENT
+SET
+SET
+SET
+CREATE TABLE
+ALTER TABLE
+CREATE TABLE
+--------------------------------------------------------------------------------------------------------------------------------------
+Download and Run Spring Tool Suite
+Download STS for Linux from below link
+- https://spring.io/tools3/sts/all (Download From this)
+- Go to Downloads, then Unzip, spring-tool-suite-3.9.6.RELEASE-e4.9.0-win32-x86_64.zip, and now STS is ready to use
+To Open STS
+- Go to Downloads , then open sts-3.9.6.RELEASE , then double click on STS.exe
+
+To Add Server in STS
+- In Quick Access Type Server and enter
+- Right Click on blank white space, Then New , and Server
+- If we don't find Tomcat Server then follow below steps
+  - Go to Help in menu bar click on Eclipse Market Place
+  - Here type Eclipse JST Server Adapter and install, now it asks for Restart click on it
+- Apache, here Tomcat v8.0 Server then Next
+- In next window, browse the Tomcat path and give finish.
+
+To Run Bulk-api-v2 Project
+- Right Click on bulk-api-v2 then Click Run AS and Run on Server, a pop-up window opens
+- Select Pivotal or Apache Tomcat Server then Finish
+- Output is shown in console output with local url http://localhost:8080/bulk-data-api/ 
+Client Registration
+-  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
+- Registring New Client 
+	UserName 	karthik3
+	Email    		gookarthik@gmail.com
+	Full Name 	Karthik M N
+	Password 	Karthik1234
+-  Then give OK, inside this another web page opens, click on Register Backend Client with public and private der file, check for both system and user.
+ 
+
+- After registration it generate ClientID and token URL as follows
+Client ID :     bulk data apiVxAHtrAqt1
+Token URL :  http://localhost:9090/bulk-data-api/token
+
+To Run Secure-Backend-App
+-  Import the secure-backend-app project as steps shown in bulk-api-v2 project
+- Open Application Properties inside Secure-backend-app project. And give following details
+Serverbase =   http://localhost:8080/bulk-data-api
+ Mode	       =    secure
+keypath       =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API Private                         Key.der
+iss                 =     https://sitenv.org
+aud              =      http://localhost:9090/bulk-data-api/token
+sub              =     bulk data apiVxAHtrAqt1
+- Above details is necessary to extract data from bulk-api-v2 to Secure-backend-app while it is run.
+-  Do same steps in bulk-api-v2 to create database with name say secure-backend-app
+- And import the database with below commands trough command prompt
+C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\backend_app.backup"
+-  Run this project as same steps shown in bulk-api-v2 project, but here with another Server say another version of tomcat running in 8080 port.
+- We get output in this link http://localhost:8080/secure-backend-app/ .
+
