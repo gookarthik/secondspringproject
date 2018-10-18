@@ -1,6 +1,8 @@
 Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Windows
 -
 Installations Software’s Required
+-
+
 - JDK 
 - Apache Tomcat
 - pgsql
@@ -17,14 +19,14 @@ Download JDK for Windows
 -  Go to downloads and double click on jdk-8u161-windows-x64.exe, Pop-up window will open which ask for Do you want to allow this app to make changes to your PC?, Click Yes, just give next next, it will install and finally give close after installation.
 - Now go to C Drive, go to Program Files then java, here we can find both jdk and jre installed files.
 
-Verifying jdk installation
--
--  In Command Prompt type java -version
+	Verifying jdk installation
+	-
+	-  In Command Prompt type java -version
 
-C:\Users\it-su>java -version
-java version "1.8.0_161"
-Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
-Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
+	C:\Users\it-su>java -version
+	java version "1.8.0_161"
+	Java(TM) SE Runtime Environment (build 1.8.0_161-b12)
+	Java HotSpot(TM) 64-Bit Server VM (build 25.161-b12, mixed mode)
 
 Setting JAVA_HOME
 -
