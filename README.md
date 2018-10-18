@@ -58,7 +58,7 @@ https://tomcat.apache.org/download-90.cgi
 ```
 cd C:\Program Files\Apache Software Foundation\apache-tomcat-8.0.53\bin\catalina run
 ```
--  Now Open Chrome and type http://localhost:7070/ to open Tomcat home Page, this verifies Tomcat is running successfully in our machine.
+-  Now Open Chrome and type http://localhost:8080/ to open Tomcat home Page, this verifies Tomcat is running successfully in our machine.
 --------------------------------------------------------------------------------------------------------------------------------------
 
 Download And Install PostgresSQL and pgAdmin4 for Windows
