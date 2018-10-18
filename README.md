@@ -158,7 +158,7 @@ To Add Server in STS
 	Serverbase =   http://localhost:8080/bulk-data-api
 	```
 	Mode	       =    secure
-	keypath        =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API Private                         Key.der
+	keypath        =    C:/Users/it-su/Desktop/Karthik/AllXyramFiles/July2018Files/Bulk API PrivateKey.der
 	iss            =    https://sitenv.org
 	aud            =    http://localhost:9090/bulk-data-api/token
 	sub            =    bulk data apiVxAHtrAqt1
