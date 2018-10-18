@@ -171,7 +171,7 @@ To Add Server in STS
 	sub            =    bulk data apiVxAHtrAqt1
 	```
 	- Above details is necessary to extract data from bulk-api-v2 to Secure-backend-app while it is run.
-	-  Do same steps in bulk-api-v2 to create database with name say secure-backend-app
+	-  Do same steps in bulk-api-v2 to create database with name say secure-backend-app in pgAdmin4
 	- And import the database with below commands trough command prompt
 	
 	```
