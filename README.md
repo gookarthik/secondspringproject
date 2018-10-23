@@ -81,7 +81,7 @@ To Create Database
 - A pop-up window will open, give Database name as bulkdataclient and Save.
 Now to Import Database
 -  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
-psql -h localhost -d bulkdataclient -U postgres -f " C:\export_30-03-2018.sql"
+psql -h localhost -d bulkdataclient -U postgres -f " C:\bulkdata.sql"
 Below is the output from command prompt:
 
 ```
@@ -123,6 +123,11 @@ To Add Server in STS
 	- Apache, here Tomcat v8.0 Server then Next
 	- In next window, browse the Tomcat path and give finish.
 
+	To Import Bulk-api-v2 project from existing location in to sts ide
+	--
+
+	-  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up window appears, Click on browse and search the path of bulk-api-v2 project and finally finish
+
 	To Run Bulk-api-v2 Project
 	--
 	
@@ -159,8 +164,12 @@ To Add Server in STS
 
 	To Run Secure-Backend-App
 	--
-	
-	-  Import the secure-backend-app project as steps shown in bulk-api-v2 project
+
+	To Import Secure-Backend-App project from existing location in to sts ide
+	--
+
+	-  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up window appears, Click on browse and search the path of Secure-Backend-App project and finally finish
+
 	- Open Application Properties inside Secure-backend-app project. And give following details
 	```
 	Serverbase     =    http://localhost:8080/bulk-data-api
@@ -171,13 +180,21 @@ To Add Server in STS
 	sub            =    bulk data apiVxAHtrAqt1
 	```
 	- Above details is necessary to extract data from bulk-api-v2 to Secure-backend-app while it is run.
-	-  Do same steps in bulk-api-v2 to create database with name say secure-backend-app in pgAdmin4
+	-  Open pgAdmin4
+	To Create Database
+	- Click on Server then click on PostgreSQL 10 then right click on Database, here click Create then click on Database  
+	- A pop-up window will open, give Database name as bulkdataclient and Save.
+	Now to Import Database
+	-  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
+	psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
 	- And import the database with below commands trough command prompt
 	
 	```
 	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
 	```
 	
-	-  Run this project as same steps shown in bulk-api-v2 project, but here with another Server say another version of tomcat running in 8080 port.
-	- We get output in this link http://localhost:8080/secure-backend-app/ .
+	- Right Click on secure-backend-app then Click Run AS and Run on Server, a pop-up window opens
+	- Select Pivotal or Apache Tomcat Server then Finish
+	- Output is shown in console output with local url http://localhost:8080/secure-backend-app/ 
+	
 
