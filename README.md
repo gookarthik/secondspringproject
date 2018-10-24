@@ -1,4 +1,4 @@
-Documentation to Run Spring Project Bulk-api-v2 and Secure-backend-app in Windows
+Documentation for Secure-backend-app set up instructions in Windows
 -
 
 ### Prerequisites
@@ -128,49 +128,16 @@ To Add Server in STS
 
 	-  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up window appears, Click on browse and search the path of bulk-api-v2 project and finally finish
 
-	To Run Bulk-api-v2 Project
-	--
 	
-	- Right Click on bulk-api-v2 then Click Run AS and Run on Server, a pop-up window opens
-	- Select Pivotal or Apache Tomcat Server then Finish
-	- Output is shown in console output with local url http://localhost:8080/bulk-data-api/ 
-
-	Client Registration
-	--
-
-	-  After running above project, we have to do client registration with local url http://localhost:9090/bulk-data-api/view/clients.html  with following details
-	- Registring New Client 
-	```
-		UserName 	abc123
-		Email    	abc123@gmail.com
-		Full Name 	abcdefg
-		Password 	abcxyz
-	```
-	-  Then give OK, inside this another web page opens, click on Register Backend Client with public der file, check for both system and user.
-	```
-	Backend Client Registration
-		Client App Name       bulk data api
-		Organization	      Xyram
-		Client Issuer URL     http://localhost:8080/bulk-data-api/
-		Public Key            Upload Public Key
-		Scope		      Check both system and user	
-	```
-
-	- After registration it generate ClientID and token URL as follows
-	```
-	Client ID :     bulk data apiVxAHtrAqt1
-	Token URL :  http://localhost:9090/bulk-data-api/token
-	```
-
-	To Run Secure-Backend-App
-	--
 
 	To Import Secure-Backend-App project from existing location in to sts ide
 	--
 
 	-  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up window appears, Click on browse and search the path of Secure-Backend-App project and finally finish
-
-	- Open Application Properties inside Secure-backend-app project. And give following details
+	
+	To Run Secure-Backend-App
+	--
+	- Open Application Properties inside Secure-backend-app project. And give following details which got after registring to client in backend-v2-app, their we get token URL and password same as sub.
 	```
 	Serverbase     =    http://localhost:8080/bulk-data-api
 	Mode	        =    secure
