@@ -75,16 +75,19 @@ How to Open pgAdmin 4
 To Import Database into pgAdmin4
 -
 
--  Open pgAdmin4
-To Create Database
-- Click on Server then click on PostgreSQL 10 then right click on Database, here click Create then click on Database  
-- A pop-up window will open, give Database name as secure-backend-app and Save.
-Now to Import Database
--  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
-psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
-Below is the output from command prompt:
+	-  Open pgAdmin4
+	To Create Database
+	--
+	- Click on Server then click on PostgreSQL 10 then right click on Database, here click Create then click on Database  
+	- A pop-up window will open, give Database name as secure-backend-app and Save.
+	
+	Now to Import Database
+	--
+	-  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
+	psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
+	Below is the output from command prompt:
 
-```
+	```
 	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
 	Password for user postgres: XYZ
 	
@@ -92,7 +95,7 @@ Below is the output from command prompt:
 	
 	CREATE
 	...
-```
+	```
 
 Spring Tool Suite Installation
 -
@@ -123,13 +126,7 @@ To Add Server in STS
 	- Apache, here Tomcat v8.0 Server then Next
 	- In next window, browse the Tomcat path and give finish.
 
-	To Import Bulk-api-v2 project from existing location in to sts ide
-	--
-
-	-  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up window appears, Click on browse and search the path of bulk-api-v2 project and finally finish
-
 	
-
 	To Import Secure-Backend-App project from existing location in to sts ide
 	--
 
