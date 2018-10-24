@@ -127,7 +127,7 @@ To Add Server in STS
 	- In next window, browse the Tomcat path and give finish.
 
 	
-	To Import Secure-Backend-App project from existing location in to sts ide
+	To Import Secure-Backend-App project from existing location in to STS
 	--
 
 	-  In STS, Click on File in menu bar, click on import then in Maven Projects, click on Existing Maven Projects. Click on Next. Pop-up window appears, Click on browse and search the path of Secure-Backend-App project and finally finish
