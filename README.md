@@ -78,14 +78,14 @@ To Import Database into pgAdmin4
 -  Open pgAdmin4
 To Create Database
 - Click on Server then click on PostgreSQL 10 then right click on Database, here click Create then click on Database  
-- A pop-up window will open, give Database name as bulkdataclient and Save.
+- A pop-up window will open, give Database name as secure-backend-app and Save.
 Now to Import Database
 -  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
-psql -h localhost -d bulkdataclient -U postgres -f " C:\bulkdata.sql"
+psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
 Below is the output from command prompt:
 
 ```
-	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d bulkdataclient -U postgres -f "C:\bulkdata.sql"
+	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
 	Password for user postgres: XYZ
 	
 	SET
@@ -147,19 +147,6 @@ To Add Server in STS
 	sub            =    bulk data apiVxAHtrAqt1
 	```
 	- Above details is necessary to extract data from bulk-api-v2 to Secure-backend-app while it is run.
-	-  Open pgAdmin4
-	To Create Database
-	- Click on Server then click on PostgreSQL 10 then right click on Database, here click Create then click on Database  
-	- A pop-up window will open, give Database name as bulkdataclient and Save.
-	Now to Import Database
-	-  Open Command Prompt in Administrator mode and go set parh to bin folder of postgre and type below command then enter.
-	psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
-	- And import the database with below commands trough command prompt
-	
-	```
-	C:\Program Files\PostgreSQL\10\bin>psql -h localhost -d secure-backend-app -U postgres -f " C:\secure_backend_app.backup"
-	```
-	
 	- Right Click on secure-backend-app then Click Run AS and Run on Server, a pop-up window opens
 	- Select Pivotal or Apache Tomcat Server then Finish
 	- Output is shown in console output with local url http://localhost:8080/secure-backend-app/ 
